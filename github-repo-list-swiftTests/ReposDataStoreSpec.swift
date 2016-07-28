@@ -32,14 +32,14 @@ class ReposDataStoreSpec: QuickSpec {
                 
                 waitUntil(action: { (done) in
                     store.getRepositoriesWithCompletion {
-                        expect(store.repositories.count).to(equal(2))
+                        expect(store.dataStoreRepositoryArray.count).to(equal(2))
                         
-                        let repo1 = store.repositories[0]
+                        let repo1 = store.dataStoreRepositoryArray[0]
                         expect(repo1.fullName).to(equal("mojombo/grit"))
                         expect(repo1.repositoryID).to(equal("1"))
                         expect(repo1.htmlURL).to(equal(NSURL(string: "https://github.com/mojombo/grit")))
                         
-                        let repo2 = store.repositories[1]
+                        let repo2 = store.dataStoreRepositoryArray[1]
                         expect(repo2.fullName).to(equal("wycats/merb-core"))
                         expect(repo2.repositoryID).to(equal("26"))
                         expect(repo2.htmlURL).to(equal(NSURL(string: "https://github.com/wycats/merb-core")))

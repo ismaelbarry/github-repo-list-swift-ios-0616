@@ -30,5 +30,5 @@ build/
 # Packages/
 .build/
 
-# Secrets
+# Secrets - This is where the client ID & client Key are
 Secrets.swift
